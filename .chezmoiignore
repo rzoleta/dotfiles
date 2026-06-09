@@ -1,1 +1,6 @@
 .pi/agent/auth.json
+.pi/agent/npm/node_modules/
+.pi/agent/sessions/
+.pi/agent/git/
+**/.git
+**/.git/**
