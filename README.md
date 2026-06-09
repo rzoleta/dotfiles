@@ -31,47 +31,30 @@ This is a [chezmoi](https://www.chezmoi.io/) repository for managing my dotfiles
 
 ## Re-syncing after updating configs
 
-When you change a config file on your current machine and want to update chezmoi:
+**Add a new config for the first time:**
+```bash
+chezmoi add ~/.config/<app>/<config>
+```
 
-1. **Add the updated file to chezmoi**:
-   ```bash
-   chezmoi add ~/.config/<app>/<config>
-   ```
-   
-   For example:
-   ```bash
-   chezmoi add ~/.codex/config.toml
-   chezmoi add ~/.pi/agent/trust.json
-   ```
+**Re-add an existing config** (overwrite chezmoi's copy with the current file):
+```bash
+chezmoi re-add ~/.config/<app>/<config>
+```
 
-2. **Check for hardcoded paths** — if the new config contains absolute paths like `/Users/ryan.zoleta/...`, convert them to chezmoi templates using `{{ .chezmoi.homeDir }}`:
-   ```bash
-   chezmoi edit ~/.codex/config.toml
-   ```
-   
-   Then rename the file in the source directory from `.toml` to `.tompl` if you added template syntax. For example:
-   ```bash
-   mv ~/.local/share/chezmoi/dot_codex/private_config.toml ~/.local/share/chezmoi/dot_codex/private_config.toml.tmpl
-   ```
+**Push to git:**
+```bash
+cd ~/.local/share/chezmoi
+git add -A
+git commit -m "Update <config-name>"
+git push
+```
 
-3. **Review and commit**:
-   ```bash
-   chezmoi diff
-   cd ~/.local/share/chezmoi
-   git add -A
-   git commit -m "Update <config-name>"
-   git push
-   ```
+**On other machines, pull the latest changes:**
+```bash
+chezmoi update
+```
 
-4. **Apply on your other machine**:
-   ```bash
-   chezmoi update
-   ```
-   Or:
-   ```bash
-   chezmoi pull
-   chezmoi apply
-   ```
+> **Note:** If the config contains absolute paths like `/Users/ryan.zoleta/...`, convert them to `{{ .chezmoi.homeDir }}` in the source file and rename it to `.tmpl` (e.g., `private_config.toml` → `private_config.toml.tmpl`).
 
 ## Quick reference
 
