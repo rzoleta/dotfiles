@@ -1,0 +1,10 @@
+{
+  "lastChangelogVersion": "0.79.0",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "kimi-k2.6",
+  "hideThinkingBlock": true,
+  "defaultThinkingLevel": "high",
+  "packages": [
+    "npm:pi-web-access"
+  ]
+}

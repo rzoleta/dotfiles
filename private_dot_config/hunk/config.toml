@@ -1,0 +1,4 @@
+theme = "catppuccin-mocha"
+mode = "split"
+watch = "true"
+agent_notes = true
