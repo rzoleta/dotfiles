@@ -1,0 +1,60 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "preview_tabs": {
+    "enabled": false
+  },
+  "inlay_hints": {
+    "enabled": false
+  },
+  "proxy": "",
+  "diff_view_style": "split",
+  "buffer_line_height": "standard",
+  "prettier": {
+    "allowed": true
+  },
+  "git_panel": {
+    "file_icons": true,
+    "dock": "left",
+    "tree_view": true
+  },
+  "cli_default_open_behavior": "new_window",
+  "terminal": {
+    "minimum_contrast": 46.0,
+    "font_size": 13.0,
+    "dock": "right"
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "icon_theme": "VSCode Icons for Zed (Dark)",
+  "vertical_scroll_margin": 1000.0,
+  "project_panel": {
+    "dock": "left"
+  },
+  "buffer_font_family": "JetBrains Mono",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "Tokyo Night",
+  },
+}

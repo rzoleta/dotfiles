@@ -1,0 +1,203 @@
+model = "gpt-5.5"
+model_reasoning_effort = "low"
+personality = "pragmatic"
+
+
+notify = ["/Users/ryan.zoleta/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+
+# model_provider = "openrouter"
+# model_reasoning_effort = "high"
+# model="qwen/qwen3.7-plus"
+
+# [model_providers.openrouter]
+# name = "openrouter"
+# base_url="https://openrouter.ai/api/v1"
+# env_key="OPENROUTER_API_KEY"
+
+service_tier = "default"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-06-08T19:47:03Z"
+source_type = "local"
+source = "/Users/ryan.zoleta/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-06-04T04:34:24Z"
+source_type = "local"
+source = "/Users/ryan.zoleta/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-05-03/what-is-the-capital-of-france"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Projects/toll-ph"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Projects/endless-bee-codex"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Projects/endless-bee-t3"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Projects/recipe-to-notion"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Projects/lynkly"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/.config/zed"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Projects/ynad"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-06/how-does-npm-registry-package-name"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Projects/tinypanel"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-06/is-it-safe-to-delete-library"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-07/codex-likes-to-auto-detect-and"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Projects"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-07/i-want-to-set-up-an"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-08/where-do-my-global-agent-skills"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-08/what-is-the-level-of-customization"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-5"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-6"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-7"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-8"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-9"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-11"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-12"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-13"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-14"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-15"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/i-want-to-live-in-the"]
+trust_level = "trusted"
+
+[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/in-2026-what-is-the-way"]
+trust_level = "trusted"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+
+[desktop]
+ambient-suggestions-enabled = false
+appearanceLightCodeThemeId = "notion"
+appearanceDarkCodeThemeId = "codex"
+sansFontSize = 15
+codeFontSize = 12
+mac-menu-bar-enabled = false
+composerEnterBehavior = "cmdIfMultiline"
+git-show-sidebar-pr-icons = true
+conversationDetailMode = "STEPS_COMMANDS"
+show-context-window-usage = true
+followUpQueueMode = "steer"
+usePointerCursors = true
+defaultTerminalLocation = "right"
+notifications-turn-mode = "unfocused"
+
+[desktop.appearanceLightChromeTheme]
+accent = "#3183d8"
+contrast = 45
+ink = "#37352f"
+opaqueWindows = true
+surface = "#ffffff"
+
+[desktop.appearanceLightChromeTheme.fonts]
+
+[desktop.appearanceLightChromeTheme.semanticColors]
+diffAdded = "#008000"
+diffRemoved = "#a31515"
+skill = "#0000ff"
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#0169cc"
+contrast = 50
+ink = "#fcfcfc"
+opaqueWindows = true
+surface = "#111111"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+code = '"JetBrains Mono", ui-monospace, "SFMono-Regular"'
+ui = "Geist, Inter"
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#00a240"
+diffRemoved = "#e02e2a"
+skill = "#b06dff"
+
+[desktop.open-in-target-preferences]
+global = "zed"
+
+[desktop.open-in-target-preferences.perPath]
+"/Users/ryan.zoleta/Projects/toll-ph" = "zed"
+
+[features]
+js_repl = false
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/Codex.app/Contents/Resources/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = ""
+NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/ryan.zoleta/.codex"
+CODEX_HOME = "/Users/ryan.zoleta/.codex"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "2de792ebdf729e85542c94275f6654821dddce546d9c7374c915f2297529e313"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.602.40724"
+CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"

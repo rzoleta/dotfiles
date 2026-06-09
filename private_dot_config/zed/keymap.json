@@ -1,0 +1,59 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": "vim::NormalBefore"
+    },
+  },
+  {
+    "bindings": {
+      "cmd-shift-g": "git_panel::Toggle"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-shift-w": "workspace::CloseAllItemsAndPanes"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-k cmd-w": "workspace::CloseAllItemsAndPanes"
+    }
+  },
+  {
+    "unbind": {
+      "cmd-shift-w": "workspace::CloseWindow"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-w": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "bindings": {
+      "g r": "editor::GoToNextReference"
+    }
+  },
+  {
+    "bindings": {
+      "g shift-r": "editor::GoToPreviousReference"
+    }
+  }
+]
