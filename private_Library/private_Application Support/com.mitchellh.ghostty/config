@@ -8,7 +8,7 @@
 
 #
 
-# /Users/ryan.zoleta/Library/Application Support/com.mitchellh.ghostty/config
+# {{ .chezmoi.homeDir }}/Library/Application Support/com.mitchellh.ghostty/config
 
 #
 

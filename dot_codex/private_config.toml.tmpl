@@ -3,7 +3,7 @@ model_reasoning_effort = "low"
 personality = "pragmatic"
 
 
-notify = ["/Users/ryan.zoleta/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+notify = ["{{ .chezmoi.homeDir }}/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 
 # model_provider = "openrouter"
 # model_reasoning_effort = "high"
@@ -19,12 +19,12 @@ service_tier = "default"
 [marketplaces.openai-bundled]
 last_updated = "2026-06-08T19:47:03Z"
 source_type = "local"
-source = "/Users/ryan.zoleta/.codex/.tmp/bundled-marketplaces/openai-bundled"
+source = "{{ .chezmoi.homeDir }}/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
 [marketplaces.openai-primary-runtime]
 last_updated = "2026-06-04T04:34:24Z"
 source_type = "local"
-source = "/Users/ryan.zoleta/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+source = "{{ .chezmoi.homeDir }}/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
 [plugins."documents@openai-primary-runtime"]
 enabled = true
@@ -41,88 +41,88 @@ enabled = true
 [plugins."browser@openai-bundled"]
 enabled = true
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-05-03/what-is-the-capital-of-france"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-05-03/what-is-the-capital-of-france"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Projects/toll-ph"]
+[projects."{{ .chezmoi.homeDir }}/Projects/toll-ph"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Projects/endless-bee-codex"]
+[projects."{{ .chezmoi.homeDir }}/Projects/endless-bee-codex"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Projects/endless-bee-t3"]
+[projects."{{ .chezmoi.homeDir }}/Projects/endless-bee-t3"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Projects/recipe-to-notion"]
+[projects."{{ .chezmoi.homeDir }}/Projects/recipe-to-notion"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Projects/lynkly"]
+[projects."{{ .chezmoi.homeDir }}/Projects/lynkly"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/.config/zed"]
+[projects."{{ .chezmoi.homeDir }}/.config/zed"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Projects/ynad"]
+[projects."{{ .chezmoi.homeDir }}/Projects/ynad"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-06/how-does-npm-registry-package-name"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-06/how-does-npm-registry-package-name"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Projects/tinypanel"]
+[projects."{{ .chezmoi.homeDir }}/Projects/tinypanel"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-06/is-it-safe-to-delete-library"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-06/is-it-safe-to-delete-library"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-07/codex-likes-to-auto-detect-and"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-07/codex-likes-to-auto-detect-and"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Projects"]
+[projects."{{ .chezmoi.homeDir }}/Projects"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-07/i-want-to-set-up-an"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-07/i-want-to-set-up-an"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-08/where-do-my-global-agent-skills"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-08/where-do-my-global-agent-skills"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-08/what-is-the-level-of-customization"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-08/what-is-the-level-of-customization"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-5"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-5"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-6"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-6"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-7"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-7"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-8"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-8"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-9"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-9"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-11"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-11"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-12"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-12"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-13"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-13"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-14"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-14"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/hello-15"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/hello-15"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/i-want-to-live-in-the"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/i-want-to-live-in-the"]
 trust_level = "trusted"
 
-[projects."/Users/ryan.zoleta/Documents/Codex/2026-06-09/in-2026-what-is-the-way"]
+[projects."{{ .chezmoi.homeDir }}/Documents/Codex/2026-06-09/in-2026-what-is-the-way"]
 trust_level = "trusted"
 
 [tui.model_availability_nux]
@@ -178,7 +178,7 @@ skill = "#b06dff"
 global = "zed"
 
 [desktop.open-in-target-preferences.perPath]
-"/Users/ryan.zoleta/Projects/toll-ph" = "zed"
+"{{ .chezmoi.homeDir }}/Projects/toll-ph" = "zed"
 
 [features]
 js_repl = false
@@ -192,8 +192,8 @@ startup_timeout_sec = 120
 NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
 NODE_REPL_NODE_MODULE_DIRS = ""
 NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/node"
-NODE_REPL_TRUSTED_CODE_PATHS = "/Users/ryan.zoleta/.codex"
-CODEX_HOME = "/Users/ryan.zoleta/.codex"
+NODE_REPL_TRUSTED_CODE_PATHS = "{{ .chezmoi.homeDir }}/.codex"
+CODEX_HOME = "{{ .chezmoi.homeDir }}/.codex"
 NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "2de792ebdf729e85542c94275f6654821dddce546d9c7374c915f2297529e313"
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
 NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
