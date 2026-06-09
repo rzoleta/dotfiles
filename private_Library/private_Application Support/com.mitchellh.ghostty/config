@@ -8,7 +8,7 @@
 
 #
 
-# {{ .chezmoi.homeDir }}/Library/Application Support/com.mitchellh.ghostty/config
+# /Users/ryan.zoleta/Library/Application Support/com.mitchellh.ghostty/config
 
 #
 
@@ -82,7 +82,7 @@
 
 # resize-overlay-duration = 4s 200ms
 
-theme = Catppuccin Mocha
+theme = TokyoNight Night
 font-family = JetBrains Mono
 font-size = 14
 font-feature = -calt
