@@ -42,6 +42,7 @@ export default function (pi: ExtensionAPI) {
 		label: "read",
 		description: originalRead.description,
 		parameters: originalRead.parameters,
+		renderShell: "self",
 		async execute(toolCallId, params, signal, onUpdate) {
 			return originalRead.execute(toolCallId, params, signal, onUpdate);
 		},
@@ -63,17 +64,11 @@ export default function (pi: ExtensionAPI) {
 			if (content?.type === "image") {
 				return new Text(theme.fg("success", "Image"), 0, 0);
 			}
-			if (content?.type !== "text") {
+			if (content?.type !== "text" || result.isError) {
 				return new Text(theme.fg("error", "Error"), 0, 0);
 			}
 
-			const details = result.details as ReadToolDetails | undefined;
-			const lineCount = content.text.split("\n").length;
-			let text = theme.fg("success", `${lineCount} lines`);
-			if (details?.truncation?.truncated) {
-				text += theme.fg("warning", " [truncated]");
-			}
-			return new Text(truncate(text), 0, 0);
+			return new Text("", 0, 0);
 		},
 	});
 
@@ -84,6 +79,7 @@ export default function (pi: ExtensionAPI) {
 		label: "bash",
 		description: originalBash.description,
 		parameters: originalBash.parameters,
+		renderShell: "self",
 		async execute(toolCallId, params, signal, onUpdate) {
 			return originalBash.execute(toolCallId, params, signal, onUpdate);
 		},
@@ -98,25 +94,18 @@ export default function (pi: ExtensionAPI) {
 		renderResult(result, { isPartial }, theme, _context) {
 			if (isPartial) return new Text(theme.fg("warning", "Running..."), 0, 0);
 
-			const details = result.details as BashToolDetails | undefined;
 			const content = result.content[0];
 			const output = content?.type === "text" ? content.text : "";
 
 			const exitMatch = output.match(/exit code: (\d+)/);
 			const exitCode = exitMatch ? parseInt(exitMatch[1], 10) : null;
-			const lineCount = output.split("\n").filter((l) => l.trim()).length;
-
-			let text = "";
-			if (exitCode === 0 || exitCode === null) {
-				text += theme.fg("success", "done");
-			} else {
-				text += theme.fg("error", `exit ${exitCode}`);
+			if (exitCode !== 0 && exitCode !== null) {
+				return new Text(theme.fg("error", `exit ${exitCode}`), 0, 0);
 			}
-			text += theme.fg("dim", ` (${lineCount} lines)`);
-			if (details?.truncation?.truncated) {
-				text += theme.fg("warning", " [truncated]");
+			if (result.isError) {
+				return new Text(theme.fg("error", "Error"), 0, 0);
 			}
-			return new Text(truncate(text), 0, 0);
+			return new Text("", 0, 0);
 		},
 	});
 
@@ -127,6 +116,7 @@ export default function (pi: ExtensionAPI) {
 		label: "write",
 		description: originalWrite.description,
 		parameters: originalWrite.parameters,
+		renderShell: "self",
 		async execute(toolCallId, params, signal, onUpdate) {
 			return originalWrite.execute(toolCallId, params, signal, onUpdate);
 		},
@@ -148,7 +138,7 @@ export default function (pi: ExtensionAPI) {
 					0,
 				);
 			}
-			return new Text(theme.fg("success", "Written"), 0, 0);
+			return new Text("", 0, 0);
 		},
 	});
 
@@ -159,6 +149,7 @@ export default function (pi: ExtensionAPI) {
 		label: "grep",
 		description: originalGrep.description,
 		parameters: originalGrep.parameters,
+		renderShell: "self",
 		async execute(toolCallId, params, signal, onUpdate) {
 			return originalGrep.execute(toolCallId, params, signal, onUpdate);
 		},
@@ -170,20 +161,8 @@ export default function (pi: ExtensionAPI) {
 		},
 		renderResult(result, { isPartial }, theme, _context) {
 			if (isPartial) return new Text(theme.fg("warning", "Searching..."), 0, 0);
-
-			const content = result.content[0];
-			const output = content?.type === "text" ? content.text : "";
-			const matchCount = output.split("\n").filter((l) => l.trim()).length;
-			const details = result.details as GrepToolDetails | undefined;
-
-			let text = theme.fg("success", `${matchCount} matches`);
-			if (details?.matchLimitReached) {
-				text += theme.fg("warning", " [limit]");
-			}
-			if (details?.truncation?.truncated) {
-				text += theme.fg("warning", " [truncated]");
-			}
-			return new Text(truncate(text), 0, 0);
+			if (result.isError) return new Text(theme.fg("error", "Error"), 0, 0);
+			return new Text("", 0, 0);
 		},
 	});
 
@@ -194,6 +173,7 @@ export default function (pi: ExtensionAPI) {
 		label: "find",
 		description: originalFind.description,
 		parameters: originalFind.parameters,
+		renderShell: "self",
 		async execute(toolCallId, params, signal, onUpdate) {
 			return originalFind.execute(toolCallId, params, signal, onUpdate);
 		},
@@ -205,20 +185,8 @@ export default function (pi: ExtensionAPI) {
 		},
 		renderResult(result, { isPartial }, theme, _context) {
 			if (isPartial) return new Text(theme.fg("warning", "Finding..."), 0, 0);
-
-			const content = result.content[0];
-			const output = content?.type === "text" ? content.text : "";
-			const fileCount = output.split("\n").filter((l) => l.trim()).length;
-			const details = result.details as FindToolDetails | undefined;
-
-			let text = theme.fg("success", `${fileCount} files`);
-			if (details?.resultLimitReached) {
-				text += theme.fg("warning", " [limit]");
-			}
-			if (details?.truncation?.truncated) {
-				text += theme.fg("warning", " [truncated]");
-			}
-			return new Text(truncate(text), 0, 0);
+			if (result.isError) return new Text(theme.fg("error", "Error"), 0, 0);
+			return new Text("", 0, 0);
 		},
 	});
 
@@ -229,6 +197,7 @@ export default function (pi: ExtensionAPI) {
 		label: "ls",
 		description: originalLs.description,
 		parameters: originalLs.parameters,
+		renderShell: "self",
 		async execute(toolCallId, params, signal, onUpdate) {
 			return originalLs.execute(toolCallId, params, signal, onUpdate);
 		},
@@ -239,20 +208,8 @@ export default function (pi: ExtensionAPI) {
 		},
 		renderResult(result, { isPartial }, theme, _context) {
 			if (isPartial) return new Text(theme.fg("warning", "Listing..."), 0, 0);
-
-			const content = result.content[0];
-			const output = content?.type === "text" ? content.text : "";
-			const itemCount = output.split("\n").filter((l) => l.trim()).length;
-			const details = result.details as LsToolDetails | undefined;
-
-			let text = theme.fg("success", `${itemCount} items`);
-			if (details?.entryLimitReached) {
-				text += theme.fg("warning", " [limit]");
-			}
-			if (details?.truncation?.truncated) {
-				text += theme.fg("warning", " [truncated]");
-			}
-			return new Text(truncate(text), 0, 0);
+			if (result.isError) return new Text(theme.fg("error", "Error"), 0, 0);
+			return new Text("", 0, 0);
 		},
 	});
 }
