@@ -172,7 +172,12 @@ cdf() {
 }
 
 fo() {
-  local opener="${1:-nvim}"
+  if [[ $# -eq 0 ]]; then
+    print -u2 "usage: fo <opener> [args...]"
+    return 1
+  fi
+
+  local opener="$1"
   shift
 
   local file

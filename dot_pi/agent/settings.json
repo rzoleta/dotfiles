@@ -1,9 +1,9 @@
 {
   "lastChangelogVersion": "0.79.0",
-  "defaultProvider": "opencode-go",
-  "defaultModel": "kimi-k2.6",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.5",
   "hideThinkingBlock": true,
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "low",
   "theme": "tokyo-night",
   "packages": [
     "npm:pi-web-access"
