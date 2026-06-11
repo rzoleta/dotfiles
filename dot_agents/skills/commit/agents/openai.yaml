@@ -1,0 +1,7 @@
+interface:
+  display_name: "Commit"
+  short_description: "Commit current diff conventionally"
+  default_prompt: "Use $commit to commit the current changes with a conventional commit message."
+
+policy:
+  allow_implicit_invocation: false
