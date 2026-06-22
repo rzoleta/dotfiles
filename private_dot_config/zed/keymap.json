@@ -47,11 +47,13 @@
     }
   },
   {
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       "g r": "editor::GoToNextReference"
     }
   },
   {
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       "g shift-r": "editor::GoToPreviousReference"
     }
